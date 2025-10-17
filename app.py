@@ -3,10 +3,10 @@ import requests
 
 # --- CONFIGURATION: API KEYS ---
 # We will load these from Streamlit's secrets manager
-RAPIDAPI_KEY = st.secrets["992bee11d3mshd96dd0aa6d3d9b7p14ca66jsn068122157885"]
-RAPIDAPI_HOST = st.secrets["ai-medical-diagnosis-api-symptoms-to-results.p.rapidapi.com"]
-EDAMAM_APP_ID = st.secrets["28cadc7b"]
-EDAMAM_APP_KEY = st.secrets["30b5c2d3f65bd277724c9c6f8220cb43"]
+RAPIDAPI_KEY = st.secrets["RAPIDAPI_KEY"]
+RAPIDAPI_HOST = st.secrets["RAPIDAPI_HOST"]
+EDAMAM_APP_ID = st.secrets["EDAMAM_APP_ID"]
+EDAMAM_APP_KEY = st.secrets["EDAMAM_APP_KEY"]
 
 # --- AGENT FUNCTIONS (No changes needed here) ---
 
@@ -96,4 +96,5 @@ if st.button("Analyze Symptoms"):
             else:
                 st.error("Could not determine a diagnosis. Please try different symptoms.")
     else:
+
         st.warning("Please enter your symptoms.")
